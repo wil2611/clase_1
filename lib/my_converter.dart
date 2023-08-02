@@ -11,24 +11,26 @@ class MyConverter {
   }
 
   // TODO: Crea un [setter] y [getter] para [binary] .
-String set binary(String binary){
+void set binary(String binary){
   _binary=binary;
 }
-int get binary{
+String get binary{
   return _binary;
 }
   // TODO: Crea un [setter] y [getter] para [decimal].
-String set decimal(String decimal){
- _decimal=decimal;
+void set decimal(String decimal){
+_decimal=decimal;
 }
-  int get decimal{
+  String get decimal{
   return _decimal;
 }
   String convertBinary() {
     // todo: Usa [Util] para convertir el numero binario a un numero decimal.
+    return Utils.bin2dec(binary);
   }
 
   String convertDecimal() {
     // todo: Usa [Converter] para convertir el numero decimal a un numero binario.
+  return Utils.dec2bin(decimal);
   }
 }
